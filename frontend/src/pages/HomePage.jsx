@@ -22,9 +22,7 @@ const HomePage = () => {
     async (username = "AnuragV314") => {
       setLoading(true);
       try {
-        if (authUser) {
-          username = authUser.username;
-        }
+        
 
         const res = await fetch(`/api/users/profile/${username}`);
         const { repos, userProfile } = await res.json();
